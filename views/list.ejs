@@ -1,0 +1,29 @@
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+        <h1><%= day %></h1>
+    </div>
+
+    <form action="/logout" method="get">
+        <div class="box-logout">
+            <input type="submit" class="loginBtn logout" value="Logout"> 
+        </div>
+    </form>
+
+    <div class="box">
+        <% items.forEach(function(item){ %>
+            <form action="/delete" method="post">
+                <div class="item">
+                    <input type="checkbox" name="checkbox" value="<%= item %>" onChange="this.form.submit()">
+                    <p><%= item %></p>
+                </div>
+            </form>
+        <% }); %>
+    
+        <form class="item" action="/" method="post">
+                <input type="text" name="newItem" id="newItem" placeholder="New Item" autocomplete="off">
+                <input type="submit" class="button" value="+">   
+        </form>
+    </div>
+
+<%- include("footer") -%>

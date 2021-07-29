@@ -1,0 +1,46 @@
+<%- include("header") -%>
+
+<% if(alert) { %>
+    <!-- <div style="text-align: center" class="alert alert-<%= type %>">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong><%= intro %></strong>  <%= message %>
+    </div> -->
+    <div style="text-align: center" class="alert alert-<%= type %> alert-dismissible fade show" role="alert">
+        <strong><%= intro %></strong>  <%= message %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<div class="box-welcome" id="heading">
+    <h1>Register Account</h1>
+</div>
+
+
+<form action="/register" method="post">
+    <div class="box">
+        <div class="item">
+            <input type="text" class="login-input" name="username" placeholder="Enter Username" autocomplete="off">
+        </div>
+        <div class="item">
+            <input type="password" class="login-input" name="password" placeholder="Enter Password" autocomplete="off">
+        </div>
+    </div>
+    <div class="box-btn">
+        <input type="submit" class="loginBtn" value="Register"> 
+    </div>
+</form>
+
+<div class="box-social">
+    <a href="/auth/google" class="social-button" id="google-connect"> <span>Connect with Google</span></a>
+    <a href="/auth/facebook" class="social-button" id="facebook-connect"> <span>Connect with Facebook</span></a>
+</div>
+
+<form action="/login" method="get">
+    <div class="box-btn">
+        <p class="reg-text">Already have account? Login now!</p>
+        <input type="submit" class="loginBtn" value="Login"> 
+    </div>
+</form>
+
+
+<%- include("footer") -%>
