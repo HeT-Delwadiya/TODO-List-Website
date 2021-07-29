@@ -26,7 +26,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://hetpatel:hetpatel@3@todolist.cqa7e.mongodb.net/todolistDB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect("PUT YOUR MONGODB CONNECTION URL HERE", {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 const todoListSchema = new mongoose.Schema ({
     username: String,
