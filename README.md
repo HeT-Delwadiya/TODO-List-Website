@@ -2,7 +2,7 @@
  A ToDo List website with social login system.
 
 # Demo
- https://todo-list-free.herokuapp.com/
+ https://todolist.hetdelwadiya.dev/
   
 # Installation
 Download repo to you pc and cd over to the directory. 
